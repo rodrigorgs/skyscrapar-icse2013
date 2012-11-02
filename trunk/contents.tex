@@ -29,7 +29,7 @@ Because the city (i.e., the software) evolves over time, it must have space to a
 The full source code is also publicly available under an open source license\footnote{\url{https://github.com/rodrigorgs/SkyscrapAR}}. The rest of this section describes SkyscrapAR in terms of its architecture, used source code metrics, and its user interface.
 
 \subsection{Architecture} \label{sec:architecture}
-SkyscrapAR is composed of two executables: the extractor and the viewer. The extractor, written in Java, reads a local Git repository containing Java source code and outputs a XML file describing its revisions, along with information for each source code file that was modified in each revision. The viewer, written in Processing\footnote{\url{http://processing.org/}}, takes the XML file and presents its data as a city that the user can view and interact with.
+SkyscrapAR is composed of two executables: the extractor and the viewer (see Figure~\ref{fig:architecture}). The extractor, written in Java, reads a local Git repository containing Java source code and outputs a XML file describing its revisions, along with information for each source code file that was modified in each revision. The viewer, written in Processing\footnote{\url{http://processing.org/}}, takes the XML file and presents its data as a city that the user can view and interact with.
 
 \begin{figure}[ht!]
  \centering
@@ -83,7 +83,7 @@ By pressing the ``H'' key on the keyboard, the user can switch between two view 
 
 \section{Applications in Software Development Practice} \label{sec:applications}
 
-Researchers have found demand for agile assessments, that is, a kind of software product assessment that may provide valuable information rapidly and cheaply to support program understanding and maintenance \cite{nierstrasz:2012}. We envision several applications of SkycrapAR in this context. This section describes some of them and shows screenshots of the tool to illustrate typical situations (see Figure 3).
+Researchers have found demand for agile assessments, that is, a kind of software product assessment that may provide valuable information rapidly and cheaply to support program understanding and maintenance \cite{nierstrasz:2012}. We envision several applications of SkycrapAR in this context. This section describes some of them and shows screenshots of the tool to illustrate typical situations (see Figure~\ref{fig:TOBEDEFINED}).
 
 \begin{figure*}[t]
  \centering
@@ -93,11 +93,11 @@ Researchers have found demand for agile assessments, that is, a kind of software
  \label{fig:TOBEDEFINED}
 \end{figure*}
 
-\textbf{Finding Skyscrapers.} In a software project, it is common to find classes which change a lot---the so called change-prone classes. In SkyscrapAR, they can be easily found as skyscrapers (see the orange building in Figure 3). Analog to the real concept, skyscrapers in our visualization are classes that concentrate a lot of the development effort. These classes deserve special attention, since they are more likely to be fault-prone \cite{nagappan:2005}. 
+\textbf{Finding Skyscrapers.} In a software project, it is common to find classes which change a lot---the so called change-prone classes. In SkyscrapAR, they can be easily found as skyscrapers (see the orange building in Figure~\ref{fig:TOBEDEFINED}). Analog to the real concept, skyscrapers in our visualization are classes that concentrate a lot of the development effort. These classes deserve special attention, since they are more likely to be fault-prone \cite{nagappan:2005}. 
 
-\textbf{Visualizing Scattering of Changes.} Source code management systems usually list packages and classes that were changed in each revision, but there is no visual information about the scattering of each commit transaction that generates a revision. This is easily done in SkycrapAR (see red buildings in Figure 3). Identifying scattered changes is important, as they represent modifications that impacted several systems modules, pointing out system-wide maintenance activities, such as refactoring or move operations among folders, or indicating that there are too many dependencies between software modules.
+\textbf{Visualizing Scattering of Changes.} Source code management systems usually list packages and classes that were changed in each revision, but there is no visual information about the scattering of each commit transaction that generates a revision. This is easily done in SkycrapAR (see red buildings in Figure~\ref{fig:TOBEDEFINED}). Identifying scattered changes is important, as they represent modifications that impacted several systems modules, pointing out system-wide maintenance activities, such as refactoring or move operations among folders, or indicating that there are too many dependencies between software modules.
 
-\textbf{Visualizing Classes Co-change.} Sometimes, classes have logical couplings even if they are not explicitly coupled to each other by their internal structural elements \cite{gall:1998}. Classes may be connected by means of implicit abstract elements related to the domain. For example, classes that are not structurally coupled but implement concerns that are strongly dependent at the requirements level. SkycrapAR provides information about the classes co-change by highlighting in red the classes that changed together in each revision (see Figure 3). 
+\textbf{Visualizing Classes Co-change.} Sometimes, classes have logical couplings even if they are not explicitly coupled to each other by their internal structural elements \cite{gall:1998}. Classes may be connected by means of implicit abstract elements related to the domain. For example, classes that are not structurally coupled but implement concerns that are strongly dependent at the requirements level. SkycrapAR provides information about the classes co-change by highlighting in red the classes that changed together in each revision (see Figure~\ref{fig:TOBEDEFINED}). 
 
 \textbf{Finding God Classes.} A god class is a well-known code smell which refers to classes that perform too much work on its own. It breaks one of the basic principles of object-oriented design which states that a class should have one single responsibility. Also, implementing several responsibilities are more likely to undergo changes as much as the evolution history targets the responsibilities implemented by the class \cite{silva:2012}. SkyscrapAR helps developer to reason about god classes using the High Occupation of Territory metaphor - tall buildings occupying large areas.
 
