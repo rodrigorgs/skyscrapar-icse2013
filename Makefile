@@ -5,3 +5,6 @@ all:
 	bibtex $(FILENAME)
 	pdflatex $(FILENAME)
 	pdflatex $(FILENAME)
+
+clean:
+	rm *.log *.bbl *.aux
