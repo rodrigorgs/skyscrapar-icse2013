@@ -1,5 +1,5 @@
 \section{Introduction} \label{sec:intro}
-Software systems evolve by nature \cite{lehman:1980}. The activity of software development becomes more complex as the system evolves, which leads to the need for preventive and corrective maintenance. This complexity is reflected in the fact that about 90\% of the total costs of software systems are associated with their maintenance \cite{erlikh:2000}. Therefore, the area represents a promising field for improvement.
+Software systems evolve by nature \cite{lehman:1980}. The activity of software development becomes more complex as the system evolves, which leads to the need for preventive and corrective maintenance. This complexity is reflected in the fact that about 90\% of the total costs of software systems are associated with their maintenance \cite{erlikh:2000}. Therefore, software evolution represents a promising field for improvement.
 
 Visualization techniques have been used in software engineering as a possible solution to the difficult task of understanding, maintaining and evolving software systems. The visual metaphors are very useful in this context because sight is the most developed sense in human being \cite{diehl:2007}.
 
@@ -7,7 +7,9 @@ During the last decade, tools such as CodeCity~\cite{wettel:2008} have used 3D v
 
 This paper presents SkyscrapAR, a new software evolution visualization approach that uses a city metaphor combined with augmented reality techniques. SkyscrapAR represents software classes and packages as 3D buildings of a chosen project revision number. These buildings are laid over on a terrain baseline blueprint derived from all versions of the software project. Buildings are sized up and colored by their size and number of changes. The project revision displayed can be dynamically chosen and buildings can be dynamically filtered for better evolution analysis. The augmented reality approach allows for easy manipulation of the produced visual scenarios. To the best of our knowledge, there is no other work in the literature that uses this approach.
 
-This paper is structured as follows. Section 2 presents SkyscrapAR and its features. Then, Section 3 discusses some applications of the tool. Finally, Section 4 concludes this article.
+\todo[inline]{This paragraph is redudant.}
+
+This paper is structured as follows. Section~\ref{sec:skyscrapar} presents SkyscrapAR and its features. Then, Section~\ref{sec:applications} discusses some applications of the tool. Finally, Section~\ref{sec:finalRemarks} concludes this article.
 
 \section{SkyscrapAR} \label{sec:skyscrapar}
 SkyscrapAR is an augmented reality (AR) software evolution visualization based on the metaphor of an evolving city. Similarly to CodeCity~\cite{wettel:2008}, SkyscrapAR represents packages (or folders in the source code file structure) as rectangular city lots, with sub-packages being stacked on top of the package containing them (see Figure~\ref{fig:sample_junit}). Classes (or source code implementation files) are represented by buildings (boxes with different areas and heights) located on top of their respective packages, with the area they occupy being proportional to the size of the class, measured in lines of code. The user can browse over revisions of the software, and see buildings appearing, disappearing, and changing their shape to reflect successive modifications that they suffered over time.
@@ -75,7 +77,7 @@ When the mouse pointer is over a building, the interface shows information for t
 
 The purpose of the highlighting is twofold: it helps the user track the position of some buildings while exploring the visualization, and enables the user to focus on the changes of the highlighted buildings. When at least one building is selected, the navigation among revisions is restricted to revisions in which at least one highlighted class is changed. This is useful to study the evolution of a single class or of a set of classes.
 
-By pressing the "H"ù key on the keyboard, the user can switch between two view modes. In the default mode, all classes are shown. In the focused mode, only highlighted classes and classes changed in the current revision are shown. This mode helps the user to analyze the scattering of changes throughout the packages. When combined with the restricted navigation that takes place when classes are highlighted, it also enables the user to visualize classes that evolve together within a given set of classes.
+By pressing the ``H'' key on the keyboard, the user can switch between two view modes. In the default mode, all classes are shown. In the focused mode, only highlighted classes and classes changed in the current revision are shown. This mode helps the user to analyze the scattering of changes throughout the packages. When combined with the restricted navigation that takes place when classes are highlighted, it also enables the user to visualize classes that evolve together within a given set of classes.
 
 \section{Applications in Software Development Practice} \label{sec:applications}
 
