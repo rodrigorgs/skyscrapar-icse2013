@@ -126,8 +126,9 @@
 
 % *** GRAPHICS RELATED PACKAGES ***
 %
+%  \usepackage{subfigure}
 \ifCLASSINFOpdf
-  % \usepackage[pdftex]{graphicx}
+   \usepackage[pdftex]{graphicx}
   % declare the path(s) where your graphic files are
   % \graphicspath{{../pdf/}{../jpeg/}}
   % and their extensions so you won't have to specify these with
@@ -137,7 +138,7 @@
   % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
   % will default to the driver specified in the system graphics.cfg if no
   % driver is specified.
-  % \usepackage[dvips]{graphicx}
+  \usepackage[dvips]{graphicx}
   % declare the path(s) where your graphic files are
   % \graphicspath{{../eps/}}
   % and their extensions so you won't have to specify these with
@@ -554,7 +555,7 @@
 % % http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
 % % The IEEEtran BibTeX style support page is at:
 % % http://www.michaelshell.org/tex/ieeetran/bibtex/
-% %\bibliographystyle{IEEEtran}
+\bibliographystyle{IEEEtran}
 % % argument is your BibTeX string definitions and bibliography database(s)
 % %\bibliography{IEEEabrv,../bib/paper}
 % %
@@ -569,7 +570,7 @@
 
 % \end{thebibliography}
 
-\bibliography{skyscrapar-icse2013}
+\bibliography{IEEEabrv, skyscrapar-icse2013}
 
 % that's all folks
 \end{document}
